@@ -8,7 +8,9 @@ export interface Props extends BlogSchema {}
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(pubDate).format("ll");
+//const displayDate = dayjs(pubDate).format("ll");
+const displayDate = dayjs(pubDate).format("YYYY-MM-DD");
+
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>

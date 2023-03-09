@@ -20,7 +20,8 @@ const {
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(updatedDate).format("ll");
+//const displayDate = dayjs(updatedDate).format("ll");
+const displayDate = dayjs(updatedDate).format("YYYY年 MM月 DD日");
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
