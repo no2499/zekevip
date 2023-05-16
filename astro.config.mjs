@@ -7,11 +7,10 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://zeke.vip',
-  integrations: [mdx(), sitemap(), tailwind()],
+  integrations: [mdx({
+    drafts: true,
+  }), sitemap(), tailwind()],
   markdown: {
     drafts: true,
   },
-  integrations: [mdx({
-    drafts: true,
-  })],
 });
