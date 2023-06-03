@@ -1,248 +1,110 @@
-# Astro Modern Personal Website
+# Stablo - Astro Blog Template with MDX
 
-![Astro Modern Personal Website](public/social_img.png)
+Stablo Astro is an Astro version of [Stablo - Next.js Blog Template](https://stablo-pro.web3templates.com/), #1 template for Next.js & Sanity CMS. This is an Astro version of the same template.
 
-Modern Personal Website Template with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, Visual themes and Responsive Desing for Astro framework.
+This free template is sponsored by [Web3Templates](https://web3templates.com)
 
-## Demo
+## Live Demo
 
-View a live demo of the [Astro Modern Personal Website](https://astro-modern-personal-website.netlify.app/)
+### [https://stablo-astro.web3templates.com/](https://stablo-astro.web3templates.com/)
+
+### [Download Stablo Astro Template](https://web3templates.com/templates/stablo-minimal-blog-website-template)
+
+## Deploy on Vercel
+
+Click the below link to deploy this template on Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=hhttps://github.com/web3templates/stablo-astro&project-name=stablo-astro&repository-name=stablo-astro&demo-title=Stablo%20Astro%20Blog%20Template&demo-description=Stablo%20Astro%20is%20a%20starter%20blog%20template%20for%20Astro%20built%20with%20MDX%20&%20TailwindCSS&demo-url=https%3A%2F%2Fstablo-astro.web3templates.com%2F&demo-image=https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)
+
+![Screenshot](https://user-images.githubusercontent.com/1884712/210131622-59ac9ff8-43fe-4a7d-b7fc-8b3b981baa52.png)
 
 ## Installation
 
-Run the following command in your terminal
+If you are reading this on github, you can click on the "Use this template" button above to create a new repository from astroship to your account. Then you can do a `git clone` to clone it to your local system.
+
+Alternatively, you can clone the project directly from this repo to your local system.
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/web3templates/stablo-astro.git myProjectName
+# or
+git clone https://github.com/web3templates/stablo-astro.git .
+```
+
+The `.` will clone it to the current directory so make sure you are inside your project folder first.
+
+### 2. Install Dependencies
 
 ```bash
 npm install
+# or
+yarn install
+# or (recommended)
+pnpm install
 ```
 
-Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
+### 3. Start development Server
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or (recommended)
+pnpm dev
 ```
 
-## Tech Stack
+### Preview & Build
 
-- [Astro](https://astro.build)
-- [tailwindcss](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
+```bash
+npm run build
+npm run preview
+# or
+yarn build
+yarn preview
+# or (recommended)
+pnpm build
+pnpm preview
+```
 
-## Project Strucutre
+We recommend using [pnpm](https://pnpm.io/) to save disk space on your computer.
 
+### Other Commands
 
-``` php
+```bash
+pnpm astro ...
+pnpm astro add
+pnpm astro --help
+```
+
+## Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```
+/
+├── public/
+│   └── ...
 ├── src/
 │   ├── components/
-│   │   ├── cs/
-│   │   │   ├── TimeLine
-│   │   ├── BaseHead.astro
-│   │   ├── Card.astro
-│   │   ├── Footer.astro
-│   │   ├── Header.astro
-│   │   └── HorizontalCard.jsx
-│   │   └── SideBar.jsx
-│   ├── content/
-│   │   ├── blog/
-│   │   │   ├── post1.md
-│   │   │   ├── post2.md
-│   │   │   └── post3.md
-│   │   ├── store/
-│   │   │   ├── item1.md
-│   │   │   ├── item2.md
+│   │   └── ...
 │   ├── layouts/
-│   │   └── BaseLayout.astro
-│   │   └── PostLayout.astro
+│   │   └── ...
 │   └── pages/
-│   │   ├── blog/
-│   │   │   ├── [...page].astro
-│   │   │   ├── [slug].astro
-│   │   └── cv.astro
-│   │   └── index.astro
-│   │   └── projects.astro
-│   │   └── rss.xml.js
-│   └── styles/
-│       └── global.css
-├── public/
-│   ├── favicon.svg
-│   └── social-image.png
-│   └── sprofile.jpg
-│   └── social_img.webp
-├── astro.config.mjs
-├── tailwind.config.cjs
-├── package.json
-└── tsconfig.json
+│       └── ...
+└── package.json
 ```
 
-### Components usage
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-#### Layout Components
+Any static assets, like images, can be placed in the `public/` directory.
 
-The `BaseHead`, `Footer`, `Header` and `SideBar` components are already included in the layout sistem. To change the website content you can edit the content of this components.
+## TailwindCSS
 
-##### SideBar
+TailwindCSS is already configured in this repo, so you can start using them without any installation.
 
-In the Sidebar you can change the links to all your website pages.
+## 👀 Want to learn more?
 
-You can change your avatar shape using [mask classes](https://daisyui.com/components/mask/).
+Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
 
-The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack.
-
-#### TimeLine
-
-The timeline components are used to conform the CV.
-
-```html
-<div class="time-line-container">
-  <TimeLineElement
-    title="Element Title"
-    subtitle="Subtitle"
-    desc="Description"
-  />
-  ...
-</div>
-```
-
-#### Card & HorizontalCard
-
-```html
-<HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
-URL" target="Optional link target (_blank default)" badge="Optional badge"
-tags={['Array','of','tags']} />
-```
-
-#### HorizontalCard Shop Item
-
-This compoenet is already included in the Store layout of the template. In case you want to use it in other place this are the props.
-
-```html
-<HorizontalShopItem
-  title="Item Title"
-  img="imge_url"
-  desc="Item description"
-  pricing="current_price"
-  oldPricing="old_price"
-  checkoutUrl="external store checkout url"
-  badge="Optional badge"
-  details="true"
-  url="item details url"
-  custom_link="Custom link url"
-  custom_link_label="Cutom link btn label"
-  target="Optional link target (_self default)"
-/>
-```
-
-### Layouts
-
-Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
-
-### Content
-
-You can add a [content collection](https://docs.astro.build/en/guides/content-collections/) in `/content/' folder, you will need add it at config.ts.
-
-#### config.ts
-Where you need to define your content collections, we define our content schemas too.
-
-#### Blog
-
-Add your `md` blog post in the `/content/blog/` folder.
-
-##### Post format
-
-Add code with this format in the top of each post file.
-
-```
----
-title: "Post Title"
-description: "Description"
-pubDate: "Post date format(Sep 10 2022)"
-heroImage: "Post Hero Image URL"
----
-```
-
-### Pages
-
-#### Blog
-
-Blog uses Astro's content collection to query post's `md`.
-
-##### [page].astro
-
-The `[page].astro` is the route to work with the paginated post list. You can change there the number of items listed for each page and the pagination button labels.
-
-##### [slug].astro
-
-The `[slug].astro` is the base route for every blog post, you can customize the page layout or behaviour, by default uses `content/blog` for content collection and `PostLayout` as layout.
-
-#### Shop
-
-Add your `md` item in the `/pages/shop/` folder.
-
-##### [page].astro
-
-The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you incle inside this folder.
-
-##### Item format
-
-Add code with this format in the top of each item file.
-
-```js
----
-title: "Demo Item 1"
-description: "Item description"
-heroImage: "Item img url"
-details: true // show or hide details btn
-custom_link_label: "Custom btn link label"
-custom_link: "Custom btn link"
-pubDate: "Sep 15 2022"
-pricing: "$15"
-oldPricing: "$25.5"
-badge: "Featured"
-checkoutUrl: "https://checkouturl.com/"
----
-```
-
-#### Static pages
-
-The other pages inlcuded in the template are static pages. The `index` page belong to the root page. You can add your pages directly in the `/pages` folder and then add a link to that pages in the `sidebar` component.
-
-Feel free to modify the content included in the pages that the template contains or add the ones you need.
-
-### Theming
-
-For change the template theme change the `data-theme` atribute of the `<html>` tag in `BaseLayout.astro` file.
-
-You can chose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
-
-## Sitemap
-
-The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
-
-## Deploy
-
-You can deploy your site on your favorite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
-
-The configuration for the deployment varies depending on the platform where you are going to do it. See the [official Astro information](https://docs.astro.build/en/guides/deploy/) to deploy your website.
-
-> **⚠️ CAUTION** </br>
-> The Blog pagination of this template is implemented using dynamic route parameters in its filename and for now this format is incompatible with SSR deploy configs, so please use the default static deploy options for your deployments.
-
-## Contributing
-
-Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
-
-One of the best ways of contribute is to grab a [bug report o feature suggestion](https://github.com/manuelernestog/astro-modern-personal-website/issues) that has been marked `accepted` and dig in.
-
-Please be wary of working on issues *not* marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
-
-## License
-
-Astro Modern Personal Website is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astro-modern-personal-website/blob/main/LICENSE) file for details.
-
-## Contributors
-
-<a href="https://github.com/manuelernestog/astro-modern-personal-website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astro-modern-personal-website" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)

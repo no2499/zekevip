@@ -1,16 +1,28 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-
-import tailwind from "@astrojs/tailwind";
-
 // https://astro.build/config
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import image from "@astrojs/image";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+
+import { remarkReadingTime } from "./src/utils/all";
+
 export default defineConfig({
-  site: 'https://zeke.vip',
-  markdown: {
-    drafts: true,
+  site: "https://stablo-astro.web3templates.com",
+  experimental: {
+    contentCollections: true,
   },
-  integrations: [mdx({
-    drafts: true,
-  }), sitemap(), tailwind()],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+    rehypePlugins: ["rehype-plugin-image-native-lazy-loading"],
+    extendDefaultPlugins: true,
+  },
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+  ],
 });

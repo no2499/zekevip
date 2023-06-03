@@ -1,17 +1,41 @@
 ---
-const today = new Date();
+import Container from "./container.astro";
+import Themeswitch from "./themeswitch.astro";
 ---
 
-<footer class="footer footer-center block mb-5 pt-10">
-  <div class="pb-2">
-    &copy; {today.getFullYear()} ze
-  </div>
-  <div class="inline opacity-75">
-    <!-- Thanks for using this template. Please keep this line to support my work :) -->
-    <a href="https://astro-modern-personal-website.netlify.app/" target="_blank" class="font-bold">Website Template</a> developed by
-    <a href="https://manuelernestog.github.io" target="_blank" class="font-bold">Manuel Ernesto ⚡️</a>
-  </div>
-</footer>
-<style>
-
-</style>
+<Container class="mt-10 border-t border-gray-100 dark:border-gray-800">
+  <footer class="flex flex-col items-center">
+    <div class="text-sm text-center">
+      Copyright © {new Date().getFullYear()} Stablo. All rights reserved.
+    </div>
+    <div
+      class="flex justify-center gap-1 mt-1 text-sm text-center text-gray-500 dark:text-gray-600">
+      <span>
+        Made by{" "}
+        <a
+          href="https://web3templates.com/?ref=stablo-astro"
+          rel="noopener"
+          target="_blank">
+          Web3Templates
+        </a>
+        <!--
+    Can we ask you a favor 🙏
+    Please keep this backlink on your website if possible.
+    or Purchase a commercial license from https://web3templates.com
+  -->
+      </span>
+      <span>&middot;</span>
+      <span>
+        <a
+          href="https://github.com/web3templates/stablo-astro"
+          rel="noopener"
+          target="_blank">
+          Github
+        </a>
+      </span>
+    </div>
+    <div class="flex items-center justify-between mt-2">
+      <Themeswitch />
+    </div>
+  </footer>
+</Container>
