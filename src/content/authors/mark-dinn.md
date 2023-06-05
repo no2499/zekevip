@@ -1,7 +1,7 @@
 ---
-title: zE
+title: Mark Dinn
 image: /images/authors/mark-dinn.jpg
-description: zE
+description: MD
 social:
   facebook: https://www.facebook.com/
   twitter: https://www.twitter.com/
