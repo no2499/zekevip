@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "zE -dev",
+    "title": "zE++",
     "base_url": "https://zeke.vip",
     "base_path": "/",
     "trailing_slash": false,
@@ -19,7 +19,7 @@
   "metadata": {
     "meta_author": "Themefisher",
     "meta_image": "/images/og-image.png",
-    "meta_description": "ze -dev"
+    "meta_description": "ze++"
   },
 
   "params": {
