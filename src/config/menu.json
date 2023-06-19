@@ -42,19 +42,19 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "關於zE++",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "聯絡方法",
       "url": "/contact"
     },
     {
-      "name": "Elements",
+      "name": "元素",
       "url": "/elements"
     },
     {
-      "name": "Privacy Policy",
+      "name": "網站政策",
       "url": "/privacy-policy"
     }
   ]
