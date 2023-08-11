@@ -20,6 +20,7 @@
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.2.3",
     "@astrojs/react": "^2.0.2",
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",

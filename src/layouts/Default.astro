@@ -5,6 +5,21 @@ const { data } = Astro.props;
 const { title } = data.data;
 const { Content } = await data.render();
 ---
+<script
+    type="text/partytown"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-ZC78NKX6FL"
+></script>
+
+<script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-ZC78NKX6FL");
+</script>
 
 <section class="section">
   <div class="container">
